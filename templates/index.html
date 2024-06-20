@@ -61,12 +61,23 @@
 		text-align: start;
 	}
 
-	.cards-layout .card-h .card-h-item.heading {
+	.cards-layout .card-h .card-h-item:hover {
+		background: linear-gradient(90deg, #00a6ff 0%, #3300ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+		text-align: center;
+	}
+
+	.cards-layout .card-h .card-h-item-heading {
 		border-bottom: 1px solid #00a6ff;
 		cursor: default;
 		color: rgb(0, 94, 165);
 		font-size: 1em;
 		font-weight: 600;
+		width: 100%;
+		text-align: start;
 	}
 
 	.cards-layout .card-h .card-h-item.active {
@@ -145,7 +156,7 @@
 	</div>
 	<div class="cards-layout">
 		<div class="card-h">
-			<div class="card-h-item heading">Package Offers</div>
+			<div class="card-h-item-heading">Package Offers</div>
 			<div class="card-h-item active">Hot Deals</div>
 			<div class="card-h-item">Recent</div>
 			<div class="card-h-item">Top Places</div>
