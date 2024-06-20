@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<style>
+	.container_tab {
+		width: 100%;
+		height: 100%;
+		overflow-y: auto;
+		overflow-x: hidden;
+		filter: brightness(0.9);
+	}
+
+	.background-img {
+		background: url("{% static 'background-index-2.png' %}") no-repeat;
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+		height: 75%;
+		transition: all .5s ease-in-out;
+	}
+
+	.background-img.change {
+		background: url("{% static 'background-index-1.png' %}") no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	nav {
+		position: absolute;
+		top: 15%;
+		width: 100%;
+		height: 10%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgb(123 188 255 / 80%);
+		box-shadow: 0px 2px 5px #556f8a;
+	}
+
+	ul.navbar-c {
+		margin: 0;
+		list-style: none;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		width: 90%;
+		padding: 0;
+		color: #090909;
+		background: #e4faffb8;
+		height: 90%;
+		box-shadow: 0px 1px 5px #556f8a;
+		text-shadow: 2px 0px 10px #00c9ff;
+		font-style: normal;
+		font-variant: unicase;
+	}
+
+	.nav-item-c {
+		cursor: pointer;
+		font-size: 1em;
+		font-weight: 600;
+		text-align: center;
+		padding: 10px;
+		transition: 0.5s;
+	}
+
+	.nav-item-c:hover {
+		text-shadow: 2px 0px 10px #fec987;
+	}
+
+	.nav-item-h {
+		font-weight: 900;
+		background: linear-gradient(90deg, #00a6ff 0%, #3300ff 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+		font-size: 1.2em;
+		cursor: grab;
+	}
+
+	.nav-item-h:hover {
+		text-shadow: 2px 0px 10px #57a2ff;
+		font-size: 1.3em;
+	}
+
+	.cards-layout{
+		display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 1.5rem;
+    padding: 10px;
+    justify-items: center;
+    background: white;
+	}
+
+	.cards-layout .card-c{
+		background: #e4faffb8;
+		box-shadow: 0px 1px 5px #556f8a;
+		height: 150px;
+		width: 150px;
+	}
+
+	@media (max-width: 1024px) {
+		.nav-item-c {
+			font-size: 0.8em;
+			padding: 5px;
+		}
+		.nav-item-h {
+			font-weight: 900;
+			font-size: 1em;
+		}
+
+		.nav-item-h:hover {
+			font-size: 1.1em;
+		}
+		
+	}
+</style>
+{% endblock %}
+{% block content %}
+<div class="container_tab has-scrollbar">
+	<div class="background-img"></div>
+	<nav>
+		<ul class="navbar-c">
+			<li class="nav-item-c">Home</li>
+			<li class="nav-item-c">About</li>
+			<li id="nav-logo" class="nav-item-h">Tbook</li>
+			<li class="nav-item-c">History</li>
+			<li class="nav-item-c">Login</li>
+		</ul>
+	</nav>
+	<div class="cards-layout">
+		<div class="card-c"></div>
+		<div class="card-c"></div>
+		<div class="card-c"></div>
+		<div class="card-c"></div>
+	</div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+	$(document).ready(function () {
+		$('.navbar-c #nav-logo').on('click', function () {
+			$('.background-img').toggleClass('change');
+			$('body').toggleClass('change-background');
+		});
+	});
+
+</script>
+{% endblock %}

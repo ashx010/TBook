@@ -1,0 +1,516 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #c5d4fb;
+    background: url('background1.png') center center fixed;
+    background-size: contain;
+    transition: background .5s ease-in-out;
+}
+body.change-background{
+    background: url('background2.png') center center fixed;
+    background-size: contain;
+}
+.sidenav-left{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.sidenav-right{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 1% 0;
+    align-items: center;
+}
+.mainscreen{
+    width: 32%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px 1px;
+    align-items: center;
+    gap: 1rem;
+}
+.screenparent{
+    width: 95%;
+    height: 85vh;
+    padding-top: 2%;
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: 2px solid #c5c1c1;
+    background-color: black;
+    filter: drop-shadow(10px 10px 10px #282b33);
+}
+.scr-cont-nav-2{
+    width: 100%;
+    height: 5vh;
+    background: url(pen.png) no-repeat center center;
+    background-size: contain;
+    filter: drop-shadow(20px 15px 10px #282b33);;
+
+}
+.background-main-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* or any color you prefer */
+    background-blend-mode: darken;
+    filter: blur(1px); /* Adjust blur level */
+    z-index: -2; /* Behind everything */
+}
+.div-1{
+    width: 100%;
+}
+.div-2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    gap: 1rem;
+}
+.sidenav-navitem-1{
+    width: 90%;
+    padding: 5px;
+    height: 35vh;
+    margin: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sidenav-navitem-2{
+    width: 90%;
+    padding: 5px;
+    height: 30vh;
+    margin: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sidenav-navitem-3{
+    width: 90%;
+    padding: 5px;
+    height: 32vh;
+    margin: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sidenav-navitem-1 .journey-calendar{
+    height: 30vh;
+    width: 70%;
+    filter: drop-shadow(10px 10px 4px #282b33);
+    background-color: #556f8a;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 5px white inset, -2px -2px 0px black inset;
+    position: relative;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sidenav-navitem-1 .profile{
+    width: 25%;
+    height: 20vh;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 10px 10px 20px white inset, 2px 1px 2px #c5c1c1 inset;
+    background-color: #282b33;
+    filter: drop-shadow(10px 5px 10px #282b33);
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+}
+.sidenav-navitem-1 .profile-pic{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: url("profile.jpg");
+    box-shadow: 15px 10px 15px #c5c1c1 inset, -2px -2px 2px black inset;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+    mix-blend-mode: difference;
+}
+.sidenav-navitem-3 .airplane{
+    height: 30vh;
+    width: 40%;
+    background-image: url("airplane.png");
+    background-size: cover;
+    filter: drop-shadow(20px 20px 10px #282b33);
+    position: relative;
+    cursor: pointer;
+}
+.sidenav-navitem-3 .train{
+    height: 30vh;
+    width: 55%;
+    background-image: url("tram.png");
+    background-size: cover;
+    filter: drop-shadow(20px 20px 10px #282b33);
+    position: relative;
+    cursor: pointer;
+}
+.sidenav-navitem-2 .hotel{
+    height: 30vh;
+    width: 40%;
+    background-image: url("hotel.png");
+    background-size: cover;
+    filter: drop-shadow(20px 20px 10px #282b33);
+    position: relative;
+    cursor: pointer;
+}
+.sidenav-navitem-2 .recent_trans{
+    height: 25vh;
+    width: 55%;
+    filter: drop-shadow(10px 10px 4px #282b33);
+    background-color: #556f8a;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 5px white inset, -2px -2px 1px black inset;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    gap: 0.5rem;
+    position: relative;
+}
+.sidenav-navitem-2 .recent_trans .recent_trans-section1{
+    border-bottom: 4px solid #373b46;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fec987;
+    padding: .5rem 3.2rem .2rem 1rem;
+    position: relative;
+}
+.sidenav-navitem-2 .recent_trans .recent_trans-section1 p{
+    margin: 1%;
+}
+
+.sidenav-navitem-2 .recent_trans .recent_trans-section1::before{
+    content: "";
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    width: 20%;
+    height: 20%;
+    background-color: #47596c;
+    border: 2px solid #2c343c;
+    border-radius: 5px;
+}
+
+.sidenav-navitem-3 .airplane .desc-layer, .sidenav-navitem-3 .train .desc-layer, .sidenav-right .bus-right .desc-layer, .sidenav-navitem-2 .hotel .desc-layer{
+    width: 30%;
+    height: 100%;
+    background-color: rgb(85 111 138 / 50%);
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    padding: 10%;
+    color: whitesmoke;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: 2px 2px 5px black;
+}
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+.sidenav-navitem-3 .train:hover .desc-layer, .sidenav-navitem-3 .airplane:hover .desc-layer, .sidenav-right .bus-right:hover .desc-layer, .sidenav-navitem-2 .hotel:hover .desc-layer {
+    width: 100%;
+    writing-mode: unset;
+    text-orientation: unset;
+}
+
+.sidenav-navitem-3 .airplane .desc-layer .desc-layer-heading, .sidenav-navitem-3 .train .desc-layer .desc-layer-heading, .sidenav-right .bus-right .desc-layer .desc-layer-heading, .sidenav-navitem-2 .hotel .desc-layer .desc-layer-heading{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 1%;
+    text-transform: uppercase;
+    color: #fec987;
+    font-variant: unicase;
+}
+.sidenav-navitem-3 .airplane .desc-layer .desc-layer-content, .sidenav-navitem-3 .train .desc-layer .desc-layer-content, .sidenav-right .bus-right .desc-layer .desc-layer-content, .sidenav-navitem-2 .hotel .desc-layer .desc-layer-content{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 1%;
+    text-align: center;
+    opacity: 0;
+    text-transform: capitalize;
+    display: none;
+}
+.sidenav-navitem-3 .airplane:hover .desc-layer .desc-layer-content, .sidenav-navitem-3 .train:hover .desc-layer .desc-layer-content, .sidenav-right .bus-right:hover .desc-layer .desc-layer-content, .sidenav-navitem-2 .hotel:hover .desc-layer .desc-layer-content{
+    opacity: 1;
+    display: block;
+}
+
+.mainscreen .screencontent{
+    width: 95%;
+    height: 98%;
+    border-radius: 1.5rem;
+    background-color: rgb(60, 60, 60);
+    position: relative;
+    overflow: hidden;
+}
+.mainscreen .screencontent::before{
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 35%;
+    width: 30%;
+    height: 2%;
+    border-radius: 1rem;
+    background-color: black;
+    z-index: 100;
+}
+.sidenav-right .bus-right{
+    background-image: url("bus.png");
+    background-size: cover;
+    filter: drop-shadow(20px 20px 10px #282b33);
+    width: 95%;
+    height: 30vh;
+    position: relative;
+    cursor: pointer;
+}
+.sidenav-right .watch-right{
+    filter: drop-shadow(20px 20px 10px #282b33);
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.watch-right .watch-parent{
+    width: 60%;
+    height: 20vh;
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 4px 1px 5px white inset, -1px 0px 5px #c5c1c1 inset;
+    background-color: #282b33;
+    filter: drop-shadow(10px 10px 10px #282b33);
+    position: relative;
+    z-index: 100;
+}
+.watch-right .watch-right-strap-top{
+    width: 35%;
+    height: 20vh;
+    background-color: #65839d;
+    position: relative;
+    box-shadow: 3px 1px 5px white inset, -2px 0px 5px black inset;
+    border-radius: 2rem 3rem 1rem 1rem;
+    z-index: 1;
+}
+.watch-right .watch-right-strap-down{
+    width: 35%;
+    height: 20vh;
+    background-color: #65839d;
+    position: relative;
+    box-shadow: 3px 1px 5px white inset, -2px 0px 5px black inset;
+    border-radius: 1rem 1rem 2rem 3rem;
+    z-index: 1;
+}
+.watch-right .watch-right-strap-top::before{
+    content: "";
+    position: absolute;
+    bottom: -15%;
+    left: 65%;
+    width: 35%;
+    height: 30%;
+    border-radius: 1rem;
+    background-color: black;
+    z-index: 1;
+    box-shadow: 1px 1px 4px white inset;
+}
+.watch-right .watch-right-strap-down::before{
+    content: "";
+    position: absolute;
+    top: -15%;
+    left: 65%;
+    width: 35%;
+    height: 30%;
+    border-radius: 1rem;
+    background-color: black;
+    z-index: 1;
+    box-shadow: 2px 2px 4px white inset;
+}
+.watch-right .watch-right-strap-top::after{
+    content: "";
+    position: absolute;
+    bottom: -15%;
+    right: 65%;
+    width: 35%;
+    height: 30%;
+    border-radius: 1rem;
+    background-color: black;
+    box-shadow: 2px 2px 4px white inset;
+}
+
+.watch-right .watch-right-strap-down::after{
+    content: "";
+    position: absolute;
+    top: -15%;
+    right: 65%;
+    width: 35%;
+    height: 30%;
+    border-radius: 1rem;
+    background-color: black;
+    box-shadow: 2px 2px 4px white inset;
+}
+
+.journey-calendar .calendar_list-heading, .journey-calendar .calendar_list-days{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    color: #fec987;
+    border-bottom: 1px solid #373b46;
+    font-size: 0.9rem;
+    text-align: center;
+    -webkit-user-select: none; /*no copy*/
+    -moz-user-select: none;    
+    -ms-user-select: none;     
+    user-select: none; 
+}
+
+.calendar_list-days li{
+    width: 14%;
+} 
+
+.journey-calendar .calendar_list-dates{
+    list-style: none;
+    display: grid;
+    width: 100%;
+    padding: 0.3rem 1rem;
+    margin: 0;
+    color: whitesmoke;
+    font-size: 12px;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.calendar_list-dates li.inactive{
+    color: #c9c9c9;
+}
+.calendar_list-dates li.active{
+    color: #fec987;
+}
+
+.calendar_list-heading li.prevbtn, .calendar_list-heading li.nextbtn{
+    cursor: pointer;
+    color: white;  
+    font-variant: unicase;
+}
+
+.calendar_list-heading li.prevbtn:hover, .calendar_list-heading li.nextbtn:hover{
+    color: #fec987;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #52aeff 0%, #ffffff 100%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.scroll-button {
+    cursor: pointer;
+}
+
+.has-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    /* for vertical scroll */
+    height: 5px;
+    /* for horizontal scroll */
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+    background: #52aeff;
+    background: linear-gradient(162deg, #52aeff 0%, #0056a0 75%, #003681 100%);
+    border: 3px solid var(--white);
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+/* table.table-custom{
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    font-family: ltlight;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: whitesmoke;
+}
+
+table.table-custom tbody,table.table-custom td,table.table-custom tfoot,table.table-custom th,table.table-custom thead,table.table-custom tr {
+    padding: 5px;
+    border-width: 0;
+    border-bottom: 1px solid #373b46;
+}
+
+table.table-custom thead{
+    font-size: 0.8rem;
+    color: #fec987;
+} */
+
+@media (max-width: 1024px){
+    .sidenav-right {
+        width: 19%;
+    }
+    .mainscreen {
+        width: 40%;
+    }
+    .div-2 {
+        gap: unset;
+    }
+    .sidenav-navitem-3 .airplane, .sidenav-navitem-3 .train, .sidenav-right .bus-right, .sidenav-navitem-2 .hotel{
+        height: 25vh;
+    }
+    .sidenav-right .bus-right{
+        width: 80%;
+    }
+    .sidenav-navitem-2 .recent_trans .recent_trans-section1{
+        font-size: 0.8rem;
+    }
+    .sidenav-navitem-3 .airplane .desc-layer .desc-layer-heading, .sidenav-navitem-3 .train .desc-layer .desc-layer-heading, .sidenav-right .bus-right .desc-layer .desc-layer-heading, .sidenav-navitem-2 .hotel .desc-layer .desc-layer-heading{
+        font-size: 1rem;
+    }
+    .sidenav-navitem-3 .airplane .desc-layer .desc-layer-content, .sidenav-navitem-3 .train .desc-layer .desc-layer-content, .sidenav-right .bus-right .desc-layer .desc-layer-content, .sidenav-navitem-2 .hotel .desc-layer .desc-layer-content{
+        font-size: 0.7rem;
+    }
+    .sidenav-navitem-1 .profile {
+        height: 15vh;
+    }
+    .sidenav-navitem-2 .recent_trans {
+        height: 20vh;
+    }
+    .journey-calendar .calendar_list-heading, .journey-calendar .calendar_list-days{
+        font-size: 0.8rem;
+    }
+    .sidenav-navitem-1 .journey-calendar {
+        height: 100%;
+    }
+}

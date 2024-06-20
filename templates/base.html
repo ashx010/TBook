@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TBOOK | Home</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="{% static 'style.css' %}" />
+
+	{% block css %}
+	{% endblock %}
+
+</head>
+
+<body>
+	<div class="div-1">
+		<div class="background-main-image"></div>
+		<div class="div-2">
+			<div class="sidenav-left">
+				<div class="sidenav-navitem-1">
+					<div class="journey-calendar">
+						<ul class="calendar_list-heading">
+							<li class="prevbtn">Prev</li>
+							<li><span class="current_month">XX</span> / <span class="current_year">20XX</span></li>
+							<li style="font-weight: 600; text-transform: uppercase; font-variant: unicase;">Journey</li>
+							<li class="refresh" style="cursor: pointer;">↻</li>
+							<li class="nextbtn">Next</li>
+						</ul>
+						<ul class="calendar_list-days">
+							<li>Su</li>
+							<li>Mo</li>
+							<li>Tu</li>
+							<li>We</li>
+							<li>Th</li>
+							<li>Fr</li>
+							<li>Sa</li>
+						</ul>
+						<ul class="calendar_list-dates"></ul>
+					</div>
+					<div class="profile">
+						<div class="profile-pic"></div>
+					</div>
+				</div>
+				<div class="sidenav-navitem-2">
+					<div class="recent_trans">
+						<div class="recent_trans-section1">
+							<p style="font-weight: 600; text-transform: uppercase; font-variant: unicase;">HISTORY</p>
+						</div>
+						<div class="recent_trans-section2"></div>
+					</div>
+					<div class="hotel">
+						<div class="desc-layer vertical-text">
+							<div class="desc-layer-heading">
+								<p>Hotels</p>
+							</div>
+							<div class="desc-layer-content">
+								<p>Book Hotels</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sidenav-navitem-3">
+					<div class="airplane">
+						<div class="desc-layer vertical-text">
+							<div class="desc-layer-heading">
+								<p>Flights</p>
+							</div>
+							<div class="desc-layer-content">
+								<p>Book Flights</p>
+							</div>
+						</div>
+					</div>
+					<div class="train">
+						<div class="desc-layer vertical-text">
+							<div class="desc-layer-heading">
+								<p>Trains</p>
+							</div>
+							<div class="desc-layer-content">
+								<p>Book Train</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mainscreen">
+				<div class="screenparent">
+					<div class="screencontent">
+						{% block content %}
+						{% endblock %}
+					</div>
+				</div>
+				<div class="scr-cont-nav-2"></div>
+			</div>
+			<div class="sidenav-right">
+				<div class="watch-right">
+					<div class="watch-right-strap-top"></div>
+					<div class="watch-parent">
+						<div class="watch-content"></div>
+					</div>
+					<div class="watch-right-strap-down"></div>
+				</div>
+				<div class="bus-right">
+					<div class="desc-layer vertical-text">
+						<div class="desc-layer-heading">
+							<p>Bus</p>
+						</div>
+						<div class="desc-layer-content">
+							<p>Book Bus</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- scripts -->
+	<script src="{% static 'script.js' %}"></script>
+	{% block scripts %}
+	{% endblock %}
+</body>
+
+</html>
