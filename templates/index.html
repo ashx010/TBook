@@ -7,51 +7,47 @@
 		height: 100%;
 		overflow-y: auto;
 		overflow-x: hidden;
-		filter: brightness(0.9);
 	}
 
 	.background-img {
-		background: url("{% static 'background-index-2.png' %}") no-repeat;
-		background-size: cover;
-		background-position: center;
-		width: 100%;
-		height: 75%;
-		transition: all .5s ease-in-out;
+		background: url(/static/background-index-3.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    margin: 5%;
+    height: 40%;
+    transition: all .5s ease-in-out;
+    border-radius: 1rem;
 	}
 
 	.background-img.change {
-		background: url("{% static 'background-index-1.png' %}") no-repeat;
+		background: url("{% static 'background1.png' %}") no-repeat;
 		background-size: cover;
 		background-position: center;
 	}
 
 	nav {
-		position: absolute;
-		top: 15%;
 		width: 100%;
-		height: 10%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background: rgb(123 188 255 / 80%);
-		box-shadow: 0px 2px 5px #556f8a;
+    margin-top: 5%;
+    height: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 	}
 
 	ul.navbar-c {
 		margin: 0;
-		list-style: none;
-		display: flex;
-		justify-content: space-evenly;
-		align-items: center;
-		width: 90%;
-		padding: 0;
-		color: #090909;
-		background: #e4faffb8;
-		height: 90%;
-		box-shadow: 0px 1px 5px #556f8a;
-		text-shadow: 2px 0px 10px #00c9ff;
-		font-style: normal;
-		font-variant: unicase;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    color: #090909;
+    background: #e4faff00;
+    height: 90%;
+    font-style: normal;
+    font-variant: unicase;
 	}
 
 	.nav-item-c {
@@ -64,7 +60,7 @@
 	}
 
 	.nav-item-c:hover {
-		text-shadow: 2px 0px 10px #fec987;
+		text-shadow: 2px 0px 10px #00a6ff;
 	}
 
 	.nav-item-h {
@@ -118,7 +114,6 @@
 {% endblock %}
 {% block content %}
 <div class="container_tab has-scrollbar">
-	<div class="background-img"></div>
 	<nav>
 		<ul class="navbar-c">
 			<li class="nav-item-c">Home</li>
@@ -128,6 +123,10 @@
 			<li class="nav-item-c">Login</li>
 		</ul>
 	</nav>
+	<div class="background-img"></div>
+	<div class="filter-bar">
+		
+	</div>
 	<div class="cards-layout">
 		<div class="card-c"></div>
 		<div class="card-c"></div>
@@ -143,6 +142,19 @@
 		$('.navbar-c #nav-logo').on('click', function () {
 			$('.background-img').toggleClass('change');
 			$('body').toggleClass('change-background');
+			$('.sidenav-navitem-3 .airplane').toggleClass('change-background');
+			$('.sidenav-navitem-3 .train').toggleClass('change-background');
+			$('.sidenav-right .bus-right').toggleClass('change-background');
+			$('.sidenav-navitem-2 .hotel').toggleClass('change-background');
+			$('.sidenav-navitem-1 .journey-calendar').toggleClass('change-background');
+			$('.sidenav-navitem-1 .profile').toggleClass('change-background');
+			$('.sidenav-navitem-2 .recent_trans').toggleClass('change-background');
+			$('.sidenav-right .watch-right').toggleClass('change-background');
+			$('.sidenav-navitem-3 .airplane .desc-layer').toggleClass('change-background');
+			$('.sidenav-navitem-3 .train .desc-layer').toggleClass('change-background');
+			$('.sidenav-right .bus-right .desc-layer').toggleClass('change-background');
+			$('.sidenav-navitem-2 .hotel .desc-layer').toggleClass('change-background');
+								
 		});
 	});
 

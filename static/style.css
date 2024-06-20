@@ -1,24 +1,30 @@
-*, ::after, ::before {
+*,
+::after,
+::before {
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: Arial, sans-serif;
     background-color: #c5d4fb;
     background: url('background1.png') center center fixed;
     background-size: contain;
     transition: background .5s ease-in-out;
 }
-body.change-background{
-    background: url('background2.png') center center fixed;
+
+body.change-background {
+    background: url('background-index-4.png') center center fixed;
     background-size: contain;
 }
-.sidenav-left{
+
+.sidenav-left {
     width: 40%;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-.sidenav-right{
+
+.sidenav-right {
     width: 15%;
     display: flex;
     justify-content: space-between;
@@ -26,7 +32,8 @@ body.change-background{
     margin: 1% 0;
     align-items: center;
 }
-.mainscreen{
+
+.mainscreen {
     width: 32%;
     display: flex;
     justify-content: center;
@@ -35,7 +42,8 @@ body.change-background{
     align-items: center;
     gap: 1rem;
 }
-.screenparent{
+
+.screenparent {
     width: 95%;
     height: 85vh;
     padding-top: 2%;
@@ -46,29 +54,37 @@ body.change-background{
     background-color: black;
     filter: drop-shadow(10px 10px 10px #282b33);
 }
-.scr-cont-nav-2{
+
+.scr-cont-nav-2 {
     width: 100%;
     height: 5vh;
     background: url(pen.png) no-repeat center center;
     background-size: contain;
-    filter: drop-shadow(20px 15px 10px #282b33);;
+    filter: drop-shadow(20px 15px 10px #282b33);
+    ;
 
 }
+
 .background-main-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* or any color you prefer */
+    background-color: rgba(0, 0, 0, 0.3);
+    /* or any color you prefer */
     background-blend-mode: darken;
-    filter: blur(1px); /* Adjust blur level */
-    z-index: -2; /* Behind everything */
+    filter: blur(1px);
+    /* Adjust blur level */
+    z-index: -2;
+    /* Behind everything */
 }
-.div-1{
+
+.div-1 {
     width: 100%;
 }
-.div-2{
+
+.div-2 {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -76,7 +92,8 @@ body.change-background{
     justify-content: center;
     gap: 1rem;
 }
-.sidenav-navitem-1{
+
+.sidenav-navitem-1 {
     width: 90%;
     padding: 5px;
     height: 35vh;
@@ -85,7 +102,8 @@ body.change-background{
     justify-content: space-between;
     align-items: center;
 }
-.sidenav-navitem-2{
+
+.sidenav-navitem-2 {
     width: 90%;
     padding: 5px;
     height: 30vh;
@@ -94,7 +112,8 @@ body.change-background{
     justify-content: space-between;
     align-items: center;
 }
-.sidenav-navitem-3{
+
+.sidenav-navitem-3 {
     width: 90%;
     padding: 5px;
     height: 32vh;
@@ -103,7 +122,8 @@ body.change-background{
     justify-content: space-between;
     align-items: center;
 }
-.sidenav-navitem-1 .journey-calendar{
+
+.sidenav-navitem-1 .journey-calendar {
     height: 30vh;
     width: 70%;
     filter: drop-shadow(10px 10px 4px #282b33);
@@ -118,7 +138,7 @@ body.change-background{
     align-items: center;
 }
 
-.sidenav-navitem-1 .profile{
+.sidenav-navitem-1 .profile {
     width: 25%;
     height: 20vh;
     padding: 2%;
@@ -132,7 +152,8 @@ body.change-background{
     z-index: 100;
     cursor: pointer;
 }
-.sidenav-navitem-1 .profile-pic{
+
+.sidenav-navitem-1 .profile-pic {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -143,7 +164,8 @@ body.change-background{
     cursor: pointer;
     mix-blend-mode: difference;
 }
-.sidenav-navitem-3 .airplane{
+
+.sidenav-navitem-3 .airplane {
     height: 30vh;
     width: 40%;
     background-image: url("airplane.png");
@@ -152,7 +174,8 @@ body.change-background{
     position: relative;
     cursor: pointer;
 }
-.sidenav-navitem-3 .train{
+
+.sidenav-navitem-3 .train {
     height: 30vh;
     width: 55%;
     background-image: url("tram.png");
@@ -161,7 +184,8 @@ body.change-background{
     position: relative;
     cursor: pointer;
 }
-.sidenav-navitem-2 .hotel{
+
+.sidenav-navitem-2 .hotel {
     height: 30vh;
     width: 40%;
     background-image: url("hotel.png");
@@ -170,7 +194,8 @@ body.change-background{
     position: relative;
     cursor: pointer;
 }
-.sidenav-navitem-2 .recent_trans{
+
+.sidenav-navitem-2 .recent_trans {
     height: 25vh;
     width: 55%;
     filter: drop-shadow(10px 10px 4px #282b33);
@@ -183,7 +208,8 @@ body.change-background{
     gap: 0.5rem;
     position: relative;
 }
-.sidenav-navitem-2 .recent_trans .recent_trans-section1{
+
+.sidenav-navitem-2 .recent_trans .recent_trans-section1 {
     border-bottom: 4px solid #373b46;
     border-radius: 5px;
     font-size: 1rem;
@@ -192,11 +218,12 @@ body.change-background{
     padding: .5rem 3.2rem .2rem 1rem;
     position: relative;
 }
-.sidenav-navitem-2 .recent_trans .recent_trans-section1 p{
+
+.sidenav-navitem-2 .recent_trans .recent_trans-section1 p {
     margin: 1%;
 }
 
-.sidenav-navitem-2 .recent_trans .recent_trans-section1::before{
+.sidenav-navitem-2 .recent_trans .recent_trans-section1::before {
     content: "";
     position: absolute;
     top: 40%;
@@ -208,7 +235,10 @@ body.change-background{
     border-radius: 5px;
 }
 
-.sidenav-navitem-3 .airplane .desc-layer, .sidenav-navitem-3 .train .desc-layer, .sidenav-right .bus-right .desc-layer, .sidenav-navitem-2 .hotel .desc-layer{
+.sidenav-navitem-3 .airplane .desc-layer,
+.sidenav-navitem-3 .train .desc-layer,
+.sidenav-right .bus-right .desc-layer,
+.sidenav-navitem-2 .hotel .desc-layer {
     width: 30%;
     height: 100%;
     background-color: rgb(85 111 138 / 50%);
@@ -227,17 +257,25 @@ body.change-background{
     flex-direction: column;
     text-shadow: 2px 2px 5px black;
 }
+
 .vertical-text {
     writing-mode: vertical-rl;
     text-orientation: upright;
 }
-.sidenav-navitem-3 .train:hover .desc-layer, .sidenav-navitem-3 .airplane:hover .desc-layer, .sidenav-right .bus-right:hover .desc-layer, .sidenav-navitem-2 .hotel:hover .desc-layer {
+
+.sidenav-navitem-3 .train:hover .desc-layer,
+.sidenav-navitem-3 .airplane:hover .desc-layer,
+.sidenav-right .bus-right:hover .desc-layer,
+.sidenav-navitem-2 .hotel:hover .desc-layer {
     width: 100%;
     writing-mode: unset;
     text-orientation: unset;
 }
 
-.sidenav-navitem-3 .airplane .desc-layer .desc-layer-heading, .sidenav-navitem-3 .train .desc-layer .desc-layer-heading, .sidenav-right .bus-right .desc-layer .desc-layer-heading, .sidenav-navitem-2 .hotel .desc-layer .desc-layer-heading{
+.sidenav-navitem-3 .airplane .desc-layer .desc-layer-heading,
+.sidenav-navitem-3 .train .desc-layer .desc-layer-heading,
+.sidenav-right .bus-right .desc-layer .desc-layer-heading,
+.sidenav-navitem-2 .hotel .desc-layer .desc-layer-heading {
     font-size: 1.3rem;
     font-weight: 600;
     margin: 1%;
@@ -245,7 +283,11 @@ body.change-background{
     color: #fec987;
     font-variant: unicase;
 }
-.sidenav-navitem-3 .airplane .desc-layer .desc-layer-content, .sidenav-navitem-3 .train .desc-layer .desc-layer-content, .sidenav-right .bus-right .desc-layer .desc-layer-content, .sidenav-navitem-2 .hotel .desc-layer .desc-layer-content{
+
+.sidenav-navitem-3 .airplane .desc-layer .desc-layer-content,
+.sidenav-navitem-3 .train .desc-layer .desc-layer-content,
+.sidenav-right .bus-right .desc-layer .desc-layer-content,
+.sidenav-navitem-2 .hotel .desc-layer .desc-layer-content {
     font-size: 1rem;
     font-weight: 400;
     margin: 1%;
@@ -254,31 +296,38 @@ body.change-background{
     text-transform: capitalize;
     display: none;
 }
-.sidenav-navitem-3 .airplane:hover .desc-layer .desc-layer-content, .sidenav-navitem-3 .train:hover .desc-layer .desc-layer-content, .sidenav-right .bus-right:hover .desc-layer .desc-layer-content, .sidenav-navitem-2 .hotel:hover .desc-layer .desc-layer-content{
+
+.sidenav-navitem-3 .airplane:hover .desc-layer .desc-layer-content,
+.sidenav-navitem-3 .train:hover .desc-layer .desc-layer-content,
+.sidenav-right .bus-right:hover .desc-layer .desc-layer-content,
+.sidenav-navitem-2 .hotel:hover .desc-layer .desc-layer-content {
     opacity: 1;
     display: block;
 }
 
-.mainscreen .screencontent{
+.mainscreen .screencontent {
     width: 95%;
     height: 98%;
     border-radius: 1.5rem;
-    background-color: rgb(60, 60, 60);
+    background-color: rgb(255, 255, 255);
+    filter: brightness(0.9);
     position: relative;
     overflow: hidden;
 }
-.mainscreen .screencontent::before{
+
+.mainscreen .screencontent::before {
     content: "";
     position: absolute;
-    top: 1%;
-    left: 35%;
-    width: 30%;
-    height: 2%;
+    top: 2%;
+    left: 2%;
+    width: 4%;
+    height: 3%;
     border-radius: 1rem;
     background-color: black;
     z-index: 100;
 }
-.sidenav-right .bus-right{
+
+.sidenav-right .bus-right {
     background-image: url("bus.png");
     background-size: cover;
     filter: drop-shadow(20px 20px 10px #282b33);
@@ -287,7 +336,8 @@ body.change-background{
     position: relative;
     cursor: pointer;
 }
-.sidenav-right .watch-right{
+
+.sidenav-right .watch-right {
     filter: drop-shadow(20px 20px 10px #282b33);
     width: 100%;
     height: 65vh;
@@ -296,7 +346,8 @@ body.change-background{
     align-items: center;
     flex-direction: column;
 }
-.watch-right .watch-parent{
+
+.watch-right .watch-parent {
     width: 60%;
     height: 20vh;
     padding: 10%;
@@ -305,11 +356,11 @@ body.change-background{
     border-radius: 50%;
     box-shadow: 4px 1px 5px white inset, -1px 0px 5px #c5c1c1 inset;
     background-color: #282b33;
-    filter: drop-shadow(10px 10px 10px #282b33);
     position: relative;
     z-index: 100;
 }
-.watch-right .watch-right-strap-top{
+
+.watch-right .watch-right-strap-top {
     width: 35%;
     height: 20vh;
     background-color: #65839d;
@@ -318,7 +369,8 @@ body.change-background{
     border-radius: 2rem 3rem 1rem 1rem;
     z-index: 1;
 }
-.watch-right .watch-right-strap-down{
+
+.watch-right .watch-right-strap-down {
     width: 35%;
     height: 20vh;
     background-color: #65839d;
@@ -327,7 +379,8 @@ body.change-background{
     border-radius: 1rem 1rem 2rem 3rem;
     z-index: 1;
 }
-.watch-right .watch-right-strap-top::before{
+
+.watch-right .watch-right-strap-top::before {
     content: "";
     position: absolute;
     bottom: -15%;
@@ -339,7 +392,8 @@ body.change-background{
     z-index: 1;
     box-shadow: 1px 1px 4px white inset;
 }
-.watch-right .watch-right-strap-down::before{
+
+.watch-right .watch-right-strap-down::before {
     content: "";
     position: absolute;
     top: -15%;
@@ -351,7 +405,8 @@ body.change-background{
     z-index: 1;
     box-shadow: 2px 2px 4px white inset;
 }
-.watch-right .watch-right-strap-top::after{
+
+.watch-right .watch-right-strap-top::after {
     content: "";
     position: absolute;
     bottom: -15%;
@@ -363,7 +418,7 @@ body.change-background{
     box-shadow: 2px 2px 4px white inset;
 }
 
-.watch-right .watch-right-strap-down::after{
+.watch-right .watch-right-strap-down::after {
     content: "";
     position: absolute;
     top: -15%;
@@ -375,7 +430,8 @@ body.change-background{
     box-shadow: 2px 2px 4px white inset;
 }
 
-.journey-calendar .calendar_list-heading, .journey-calendar .calendar_list-days{
+.journey-calendar .calendar_list-heading,
+.journey-calendar .calendar_list-days {
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -387,17 +443,18 @@ body.change-background{
     border-bottom: 1px solid #373b46;
     font-size: 0.9rem;
     text-align: center;
-    -webkit-user-select: none; /*no copy*/
-    -moz-user-select: none;    
-    -ms-user-select: none;     
-    user-select: none; 
+    -webkit-user-select: none;
+    /*no copy*/
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.calendar_list-days li{
+.calendar_list-days li {
     width: 14%;
-} 
+}
 
-.journey-calendar .calendar_list-dates{
+.journey-calendar .calendar_list-dates {
     list-style: none;
     display: grid;
     width: 100%;
@@ -411,20 +468,23 @@ body.change-background{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-.calendar_list-dates li.inactive{
+.calendar_list-dates li.inactive {
     color: #c9c9c9;
 }
-.calendar_list-dates li.active{
+
+.calendar_list-dates li.active {
     color: #fec987;
 }
 
-.calendar_list-heading li.prevbtn, .calendar_list-heading li.nextbtn{
+.calendar_list-heading li.prevbtn,
+.calendar_list-heading li.nextbtn {
     cursor: pointer;
-    color: white;  
+    color: white;
     font-variant: unicase;
 }
 
-.calendar_list-heading li.prevbtn:hover, .calendar_list-heading li.nextbtn:hover{
+.calendar_list-heading li.prevbtn:hover,
+.calendar_list-heading li.nextbtn:hover {
     color: #fec987;
 }
 
@@ -454,6 +514,25 @@ body.change-background{
     border-radius: 20px;
 }
 
+.sidenav-navitem-3 .airplane.change-background,
+.sidenav-navitem-3 .train.change-background,
+.sidenav-right .bus-right.change-background,
+.sidenav-navitem-2 .hotel.change-background,
+.sidenav-navitem-1 .journey-calendar.change-background,
+.sidenav-navitem-1 .profile.change-background,
+.sidenav-navitem-2 .recent_trans.change-background,
+.sidenav-right .watch-right.change-background {
+    filter: drop-shadow(5px 5px 10px #c1c1c1);
+}
+
+.sidenav-navitem-3 .airplane .desc-layer.change-background,
+.sidenav-navitem-3 .train .desc-layer.change-background,
+.sidenav-right .bus-right .desc-layer.change-background,
+.sidenav-navitem-2 .hotel .desc-layer.change-background {
+    background-color: rgba(76, 76, 76, 0.5);
+    color: whitesmoke;
+}
+
 /* table.table-custom{
     margin-bottom: 5px;
     text-align: center;
@@ -476,40 +555,61 @@ table.table-custom thead{
     color: #fec987;
 } */
 
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
     .sidenav-right {
         width: 19%;
     }
+
     .mainscreen {
         width: 40%;
     }
+
     .div-2 {
         gap: unset;
     }
-    .sidenav-navitem-3 .airplane, .sidenav-navitem-3 .train, .sidenav-right .bus-right, .sidenav-navitem-2 .hotel{
+
+    .sidenav-navitem-3 .airplane,
+    .sidenav-navitem-3 .train,
+    .sidenav-right .bus-right,
+    .sidenav-navitem-2 .hotel {
         height: 25vh;
     }
-    .sidenav-right .bus-right{
+
+    .sidenav-right .bus-right {
         width: 80%;
     }
-    .sidenav-navitem-2 .recent_trans .recent_trans-section1{
+
+    .sidenav-navitem-2 .recent_trans .recent_trans-section1 {
         font-size: 0.8rem;
     }
-    .sidenav-navitem-3 .airplane .desc-layer .desc-layer-heading, .sidenav-navitem-3 .train .desc-layer .desc-layer-heading, .sidenav-right .bus-right .desc-layer .desc-layer-heading, .sidenav-navitem-2 .hotel .desc-layer .desc-layer-heading{
+
+    .sidenav-navitem-3 .airplane .desc-layer .desc-layer-heading,
+    .sidenav-navitem-3 .train .desc-layer .desc-layer-heading,
+    .sidenav-right .bus-right .desc-layer .desc-layer-heading,
+    .sidenav-navitem-2 .hotel .desc-layer .desc-layer-heading {
         font-size: 1rem;
     }
-    .sidenav-navitem-3 .airplane .desc-layer .desc-layer-content, .sidenav-navitem-3 .train .desc-layer .desc-layer-content, .sidenav-right .bus-right .desc-layer .desc-layer-content, .sidenav-navitem-2 .hotel .desc-layer .desc-layer-content{
+
+    .sidenav-navitem-3 .airplane .desc-layer .desc-layer-content,
+    .sidenav-navitem-3 .train .desc-layer .desc-layer-content,
+    .sidenav-right .bus-right .desc-layer .desc-layer-content,
+    .sidenav-navitem-2 .hotel .desc-layer .desc-layer-content {
         font-size: 0.7rem;
     }
+
     .sidenav-navitem-1 .profile {
         height: 15vh;
     }
+
     .sidenav-navitem-2 .recent_trans {
         height: 20vh;
     }
-    .journey-calendar .calendar_list-heading, .journey-calendar .calendar_list-days{
+
+    .journey-calendar .calendar_list-heading,
+    .journey-calendar .calendar_list-days {
         font-size: 0.8rem;
     }
+
     .sidenav-navitem-1 .journey-calendar {
         height: 100%;
     }
