@@ -92,8 +92,19 @@
 			<div class="mainscreen">
 				<div class="screenparent">
 					<div class="screencontent">
-						{% block content %}
-						{% endblock %}
+						<div class="container_tab has-scrollbar">
+							<nav>
+								<ul class="navbar-c">
+									<li id="nav-logo" class="nav-item-h">Tbook</li>
+									<li class="nav-item-c">Home</li>
+									<li class="nav-item-c">About</li>
+									<li class="nav-item-c">Package</li>
+									<li class="nav-item-c">Profile</li>
+								</ul>
+							</nav>
+							{% block content %}
+							{% endblock %}
+						</div>
 					</div>
 				</div>
 				<div class="scr-cont-nav-2"></div>

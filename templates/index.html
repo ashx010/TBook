@@ -2,19 +2,13 @@
 {% load static %}
 {% block css %}
 <style>
-	.container_tab {
-		width: 100%;
-		height: 100%;
-		overflow-y: auto;
-		overflow-x: hidden;
-	}
 
 	.background-img {
 		background: url(/static/background-index-3.png) no-repeat;
     background-size: cover;
     background-position: center;
     width: 90%;
-    margin: 5%;
+    margin: 2% 5%;
     height: 40%;
     transition: all .5s ease-in-out;
     border-radius: 1rem;
@@ -26,114 +20,141 @@
 		background-position: center;
 	}
 
-	nav {
-		width: 100%;
-    margin-top: 5%;
-    height: 7%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	}
-
-	ul.navbar-c {
-		margin: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    color: #090909;
-    background: #e4faff00;
-    height: 90%;
-    font-style: normal;
-    font-variant: unicase;
-	}
-
-	.nav-item-c {
-		cursor: pointer;
-		font-size: 1em;
-		font-weight: 600;
-		text-align: center;
-		padding: 10px;
-		transition: 0.5s;
-	}
-
-	.nav-item-c:hover {
-		text-shadow: 2px 0px 10px #00a6ff;
-	}
-
-	.nav-item-h {
-		font-weight: 900;
-		background: linear-gradient(90deg, #00a6ff 0%, #3300ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		color: transparent;
-		font-size: 1.2em;
-		cursor: grab;
-	}
-
-	.nav-item-h:hover {
-		text-shadow: 2px 0px 10px #57a2ff;
-		font-size: 1.3em;
-	}
-
 	.cards-layout{
 		display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-gap: 1.5rem;
-    padding: 10px;
+		gap: 1.5rem;
+		padding: 2% 4%;
     justify-items: center;
     background: white;
+		align-items: center;
+		font-variant: unicase;
+		font-size: 0.8em;
 	}
 
 	.cards-layout .card-c{
-		background: #e4faffb8;
-		box-shadow: 0px 1px 5px #556f8a;
-		height: 150px;
-		width: 150px;
+		background: #ffffffb8;
+    height: 100px;
+    width: 100%;
+    box-shadow: 0px 0px 10px #556f8a60;
+    border-radius: .5rem;
+	}
+
+	.cards-layout .card-h{
+		background: #ffffffb8;
+    box-shadow: 0px 0px 5px #556f8a;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 15%;
+    border-radius: 1rem;
+		transition: all .5s ease-in-out;
+	}
+
+	.cards-layout .card-h .card-h-item {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+		cursor: pointer;
+		width: 100%;
+		text-align: start;
+	}
+
+	.cards-layout .card-h .card-h-item.heading {
+		border-bottom: 1px solid #00a6ff;
+		cursor: default;
+		color: rgb(0, 94, 165);
+		font-size: 1em;
+		font-weight: 600;
+	}
+
+	.cards-layout .card-h .card-h-item.active {
+		background: linear-gradient(90deg, #00a6ff 0%, #3300ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    border: 1px solid #00a6ff;
+    padding: 2%;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 1rem;
+		font-size: 1.15em;
+		transition: all .5s ease-in-out;
+	}	
+
+	.filter-bar{
+		width: 80%;
+    margin: 1% 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 1rem;
+		padding: 0px 10px;
+	}
+
+	.filter-item{
+		cursor: pointer;
+    font-size: 1em;
+    font-weight: 400;
+    width: 33%;
+		margin: 10px 0;
+    padding: 2%;
+    transition: 0.5s;
+    position: relative;
+    border-right: 1px solid rgba(0, 0, 0, 0.25);
+	}
+
+	.filter-item:last-child{
+		border-right: none;
+	}
+
+	.filter-item::before{
+		content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 33%;
+    right: 20%;
+    border-left: 2px solid black;
+    transform: rotate(315deg);
+    border-bottom: 2px solid black;
+    transition: 0.5s;
 	}
 
 	@media (max-width: 1024px) {
-		.nav-item-c {
-			font-size: 0.8em;
-			padding: 5px;
-		}
-		.nav-item-h {
-			font-weight: 900;
-			font-size: 1em;
-		}
-
-		.nav-item-h:hover {
-			font-size: 1.1em;
+		.filter-item::before {
+			width: 7px;
+			height: 7px;
+			top: 33%;
+			right: 7%;
 		}
 		
 	}
 </style>
 {% endblock %}
 {% block content %}
-<div class="container_tab has-scrollbar">
-	<nav>
-		<ul class="navbar-c">
-			<li class="nav-item-c">Home</li>
-			<li class="nav-item-c">About</li>
-			<li id="nav-logo" class="nav-item-h">Tbook</li>
-			<li class="nav-item-c">History</li>
-			<li class="nav-item-c">Login</li>
-		</ul>
-	</nav>
 	<div class="background-img"></div>
 	<div class="filter-bar">
-		
+		<div class="filter-item">Location</div>
+		<div class="filter-item">Service</div>
+		<div class="filter-item">Date</div>
 	</div>
 	<div class="cards-layout">
+		<div class="card-h">
+			<div class="card-h-item heading">Package Offers</div>
+			<div class="card-h-item active">Hot Deals</div>
+			<div class="card-h-item">Recent</div>
+			<div class="card-h-item">Top Places</div>
+		</div>
 		<div class="card-c"></div>
 		<div class="card-c"></div>
 		<div class="card-c"></div>
 		<div class="card-c"></div>
 	</div>
-</div>
 {% endblock %}
 
 {% block scripts %}
@@ -155,6 +176,13 @@
 			$('.sidenav-right .bus-right .desc-layer').toggleClass('change-background');
 			$('.sidenav-navitem-2 .hotel .desc-layer').toggleClass('change-background');
 								
+		});
+	});
+
+	$(document).ready(function () {
+		$('.card-h-item').on('click', function () {
+			$('.card-h-item').removeClass('active');
+			$(this).addClass('active');
 		});
 	});
 
