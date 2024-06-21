@@ -70,3 +70,83 @@ $(document).ready(function(){
         calendarCreate(date, month_c, year_c);
     });
 });
+
+// Function to set a cookie
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+// Function to get a cookie
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+function fullScreen(s){
+    if($(s).hasClass("enabled")){
+        $(".sidenav-left").hide();
+        $(".sidenav-right").hide();
+        $('.scr-cont-nav-2 ').hide();
+    }else{
+        $(".sidenav-left").show();
+        $(".sidenav-right").show();
+        $('.scr-cont-nav-2 ').show();
+    }
+    $(".mainscreen").toggleClass('full-screen');
+    $(".screenparent").toggleClass('full-screen');
+    $(".mainscreen .screencontent").toggleClass('full-screen');
+    $("nav").toggleClass('full-screen');
+    $("ul.nav-more").toggleClass("full-screen");
+    $("li.nav-more-item").toggleClass("full-screen");
+}
+
+$(document).ready(function(){
+    $(".navbar-c .nav-item-c[data='more']").on('click', function(e){
+        e.stopPropagation();
+        $("ul.nav-more").toggleClass('active');
+    });
+
+    $(document).on('click', function(){
+        if($(".nav-more").hasClass('active')){
+            $("ul.nav-more").removeClass('active');
+        }
+    });
+
+    
+    
+    if(window.screen.width <= 768){
+        $("ul.nav-more .nav-more-item[data='full-screen']").hide();
+    }
+
+    if(getCookie('full-screen') === 'enabled'){
+        $("ul.nav-more .nav-more-item[data='full-screen']").addClass('enabled');
+        $("ul.nav-more .nav-more-item[data='full-screen']").text('Revert');
+        fullScreen($("ul.nav-more .nav-more-item[data='full-screen']"));
+    }
+
+    $("ul.nav-more .nav-more-item[data='full-screen']").on('click', function(){
+        $(this).toggleClass('enabled');;
+        
+        fullScreen(this);
+
+        if($(this).hasClass('enabled')){
+            $(this).text('Revert')
+            setCookie('full-screen', 'enabled', 1);
+        }else{
+            $(this).text('Full Screen')
+            setCookie('full-screen', 'disabled', 1);
+        }
+    });
+});

@@ -4,20 +4,23 @@
 <style>
 
 	.background-img {
-		background: url(/static/background-index-3.png) no-repeat;
+		background: url('/static/background-index-3.png') no-repeat;
     background-size: cover;
     background-position: center;
     width: 90%;
     margin: 2% 5%;
-    height: 40%;
+    height: 70%;
     transition: all .5s ease-in-out;
     border-radius: 1rem;
 	}
 
-	.background-img.change {
-		background: url("{% static 'background1.png' %}") no-repeat;
-		background-size: cover;
-		background-position: center;
+	.background-img.full-screen {
+    background: url('/static/background-index-3.png') no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 96%;
+    margin: 1% 2%;
+    height: 100%;
 	}
 
 	.cards-layout{
@@ -97,8 +100,8 @@
 	}	
 
 	.filter-bar{
-		width: 80%;
-    margin: 1% 10%;
+		width: 84%;
+    margin: 1% 8%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -111,29 +114,64 @@
 		cursor: pointer;
     font-size: 1em;
     font-weight: 400;
-    width: 33%;
-		margin: 10px 0;
-    padding: 2%;
+    margin: 10px 0;
+    padding: 2% 4%;
     transition: 0.5s;
     position: relative;
     border-right: 1px solid rgba(0, 0, 0, 0.25);
+		font-variant: small-caps;
 	}
 
-	.filter-item:last-child{
-		border-right: none;
+	.filter-submit{
+		cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+		margin: 10px 0;
+    padding: 2% 4%;
+    transition: 0.5s;
+    position: relative;
+		background: linear-gradient(90deg, #00a6ff 0%, #3300ff 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+		font-variant: unicase;
 	}
 
 	.filter-item::before{
 		content: '';
     position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 33%;
-    right: 20%;
-    border-left: 2px solid black;
+    width: 5px;
+    height: 5px;
+    bottom: 5%;
+    left: 20px;
+    border-left: 2px solid #000000a1;
     transform: rotate(315deg);
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #000000a1;
     transition: 0.5s;
+	}
+
+	.frontpage{
+		position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 55%;
+    justify-content: space-evenly;
+	}
+
+	.frontpage.full-screen{
+    height: 90%;
+	}
+
+	.filter-bar.full-screen{
+		position: absolute;
+		top: 70%;
+		left: 22%;
+		width: 45%;
+		background: rgb(255 255 255 / 50%);
+    backdrop-filter: blur(5px);
 	}
 
 	@media (max-width: 1024px) {
@@ -148,11 +186,14 @@
 </style>
 {% endblock %}
 {% block content %}
-	<div class="background-img"></div>
-	<div class="filter-bar">
-		<div class="filter-item">Location</div>
-		<div class="filter-item">Service</div>
-		<div class="filter-item">Date</div>
+	<div class="frontpage">
+		<div class="background-img"></div>
+		<div class="filter-bar">
+			<div class="filter-item">Location</div>
+			<div class="filter-item">Service</div>
+			<div class="filter-item">Date</div>
+			<div class="filter-submit">Submit</div>
+		</div>
 	</div>
 	<div class="cards-layout">
 		<div class="card-h">
@@ -171,30 +212,23 @@
 {% block scripts %}
 <script>
 	$(document).ready(function () {
-		$('.navbar-c #nav-logo').on('click', function () {
-			$('.background-img').toggleClass('change');
-			$('body').toggleClass('change-background');
-			$('.sidenav-navitem-3 .airplane').toggleClass('change-background');
-			$('.sidenav-navitem-3 .train').toggleClass('change-background');
-			$('.sidenav-right .bus-right').toggleClass('change-background');
-			$('.sidenav-navitem-2 .hotel').toggleClass('change-background');
-			$('.sidenav-navitem-1 .journey-calendar').toggleClass('change-background');
-			$('.sidenav-navitem-1 .profile').toggleClass('change-background');
-			$('.sidenav-navitem-2 .recent_trans').toggleClass('change-background');
-			$('.sidenav-right .watch-right').toggleClass('change-background');
-			$('.sidenav-navitem-3 .airplane .desc-layer').toggleClass('change-background');
-			$('.sidenav-navitem-3 .train .desc-layer').toggleClass('change-background');
-			$('.sidenav-right .bus-right .desc-layer').toggleClass('change-background');
-			$('.sidenav-navitem-2 .hotel .desc-layer').toggleClass('change-background');
-								
-		});
-	});
-
-	$(document).ready(function () {
 		$('.card-h-item').on('click', function () {
 			$('.card-h-item').removeClass('active');
 			$(this).addClass('active');
 		});
+	});
+	
+
+	if(getCookie('full-screen') === 'enabled'){
+		$('.background-img').toggleClass('full-screen');
+		$('.filter-bar').toggleClass('full-screen');
+		$('.frontpage').toggleClass('full-screen');
+	}
+
+	$("ul.nav-more .nav-more-item[data='full-screen']").on('click', function(){
+		$('.background-img').toggleClass('full-screen');
+		$('.filter-bar').toggleClass('full-screen');
+		$('.frontpage').toggleClass('full-screen');
 	});
 
 </script>
