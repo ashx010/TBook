@@ -167,21 +167,42 @@
 
 	.filter-bar.full-screen{
 		position: absolute;
-		top: 70%;
-		left: 22%;
-		width: 45%;
-		background: rgb(255 255 255 / 50%);
+    top: 65%;
+    left: 23%;
+    width: 40%;
+    border: unset;
+    background: rgb(255 255 255 / 50%);
+    filter: drop-shadow(2px 4px 6px white);
     backdrop-filter: blur(5px);
+	}
+
+	.filter-item.full-screen{
+		padding: 2% 10% 2% 2%;
 	}
 
 	@media (max-width: 1024px) {
 		.filter-item::before {
 			width: 7px;
 			height: 7px;
-			top: 33%;
 			right: 7%;
 		}
 		
+		.cards-layout .card-h {
+			padding: 0 10%
+		}
+
+		.filter-item {
+			padding: 2%;
+		}
+
+		.filter-item.full-screen{
+			padding: 2% 5% 2% 2%;
+		}
+
+		.filter-bar {
+			width: 90%;
+			margin: 1% 5%;
+		}
 	}
 </style>
 {% endblock %}
@@ -223,12 +244,15 @@
 		$('.background-img').toggleClass('full-screen');
 		$('.filter-bar').toggleClass('full-screen');
 		$('.frontpage').toggleClass('full-screen');
+		$('.filter-item').toggleClass('full-screen');
 	}
 
 	$("ul.nav-more .nav-more-item[data='full-screen']").on('click', function(){
 		$('.background-img').toggleClass('full-screen');
 		$('.filter-bar').toggleClass('full-screen');
 		$('.frontpage').toggleClass('full-screen');
+		$('.filter-item').toggleClass('full-screen');
+
 	});
 
 </script>

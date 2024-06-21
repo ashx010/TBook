@@ -763,6 +763,10 @@ table.table-custom thead{
     .nav-item-h:hover {
         font-size: 1.1em;
     }
+
+    ul.nav-more{
+        font-size: 0.8em;
+    }
 }
 /* 
 @media (max-width: 768px) {
