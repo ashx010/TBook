@@ -53,11 +53,9 @@ body {
 .scr-cont-nav-2 {
     width: 100%;
     height: 5vh;
-    background: url(pen.png) no-repeat center center;
+    background: url('pen.png') no-repeat center center;
     background-size: contain;
     filter: drop-shadow(20px 15px 10px #282b33);
-    ;
-
 }
 
 .background-main-image {
@@ -67,12 +65,10 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
-    /* or any color you prefer */
     background-blend-mode: darken;
     filter: blur(1px);
-    /* Adjust blur level */
+    backdrop-filter: blur(1px);
     z-index: -2;
-    /* Behind everything */
 }
 
 .div-1 {
@@ -118,7 +114,7 @@ body {
     align-items: center;
 }
 
-.sidenav-navitem-1 .journey-calendar {
+.journey-calendar {
     height: 30vh;
     width: 70%;
     filter: drop-shadow(10px 10px 4px #282b33);
@@ -133,7 +129,7 @@ body {
     align-items: center;
 }
 
-.sidenav-navitem-1 .profile {
+.profile {
     width: 25%;
     height: 20vh;
     padding: 2%;
@@ -148,7 +144,7 @@ body {
     cursor: pointer;
 }
 
-.sidenav-navitem-1 .profile-pic {
+.profile-pic {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -160,7 +156,7 @@ body {
     mix-blend-mode: difference;
 }
 
-.sidenav-navitem-3 .airplane {
+.airplane {
     height: 30vh;
     width: 40%;
     background-image: url("airplane.png");
@@ -170,7 +166,7 @@ body {
     cursor: pointer;
 }
 
-.sidenav-navitem-3 .train {
+.train {
     height: 30vh;
     width: 55%;
     background-image: url("tram.png");
@@ -180,7 +176,7 @@ body {
     cursor: pointer;
 }
 
-.sidenav-navitem-2 .hotel {
+.hotel {
     height: 30vh;
     width: 40%;
     background-image: url("hotel.png");
@@ -190,7 +186,7 @@ body {
     cursor: pointer;
 }
 
-.sidenav-navitem-2 .recent_trans {
+.recent_trans {
     height: 25vh;
     width: 55%;
     filter: drop-shadow(10px 10px 4px #282b33);
@@ -204,7 +200,7 @@ body {
     position: relative;
 }
 
-.sidenav-navitem-2 .recent_trans .recent_trans-section1 {
+.recent_trans .recent_trans-section1 {
     border-bottom: 4px solid #373b46;
     border-radius: 5px;
     font-size: 1rem;
@@ -214,11 +210,11 @@ body {
     position: relative;
 }
 
-.sidenav-navitem-2 .recent_trans .recent_trans-section1 p {
+.recent_trans .recent_trans-section1 p {
     margin: 1%;
 }
 
-.sidenav-navitem-2 .recent_trans .recent_trans-section1::before {
+.recent_trans .recent_trans-section1::before {
     content: "";
     position: absolute;
     top: 40%;
@@ -230,10 +226,10 @@ body {
     border-radius: 5px;
 }
 
-.sidenav-navitem-3 .airplane .desc-layer,
-.sidenav-navitem-3 .train .desc-layer,
-.sidenav-right .bus-right .desc-layer,
-.sidenav-navitem-2 .hotel .desc-layer {
+.airplane .desc-layer,
+.train .desc-layer,
+.bus-right .desc-layer,
+.hotel .desc-layer {
     width: 30%;
     height: 100%;
     background-color: rgb(85 111 138 / 50%);
@@ -258,19 +254,19 @@ body {
     text-orientation: upright;
 }
 
-.sidenav-navitem-3 .train:hover .desc-layer,
-.sidenav-navitem-3 .airplane:hover .desc-layer,
-.sidenav-right .bus-right:hover .desc-layer,
-.sidenav-navitem-2 .hotel:hover .desc-layer {
-    width: 100%;
-    writing-mode: unset;
-    text-orientation: unset;
+.train:hover .desc-layer,
+.airplane:hover .desc-layer,
+.bus-right:hover .desc-layer,
+.hotel:hover .desc-layer {
+    width: 100% !important;
+    writing-mode: unset !important;
+    text-orientation: unset !important;
 }
 
-.sidenav-navitem-3 .airplane .desc-layer .desc-layer-heading,
-.sidenav-navitem-3 .train .desc-layer .desc-layer-heading,
-.sidenav-right .bus-right .desc-layer .desc-layer-heading,
-.sidenav-navitem-2 .hotel .desc-layer .desc-layer-heading {
+.airplane .desc-layer .desc-layer-heading,
+.train .desc-layer .desc-layer-heading,
+.bus-right .desc-layer .desc-layer-heading,
+.hotel .desc-layer .desc-layer-heading {
     font-size: 1.3rem;
     font-weight: 600;
     margin: 1%;
@@ -279,10 +275,10 @@ body {
     font-variant: unicase;
 }
 
-.sidenav-navitem-3 .airplane .desc-layer .desc-layer-content,
-.sidenav-navitem-3 .train .desc-layer .desc-layer-content,
-.sidenav-right .bus-right .desc-layer .desc-layer-content,
-.sidenav-navitem-2 .hotel .desc-layer .desc-layer-content {
+.airplane .desc-layer .desc-layer-content,
+.train .desc-layer .desc-layer-content,
+.bus-right .desc-layer .desc-layer-content,
+.hotel .desc-layer .desc-layer-content {
     font-size: 1rem;
     font-weight: 400;
     margin: 1%;
@@ -292,10 +288,10 @@ body {
     display: none;
 }
 
-.sidenav-navitem-3 .airplane:hover .desc-layer .desc-layer-content,
-.sidenav-navitem-3 .train:hover .desc-layer .desc-layer-content,
-.sidenav-right .bus-right:hover .desc-layer .desc-layer-content,
-.sidenav-navitem-2 .hotel:hover .desc-layer .desc-layer-content {
+.airplane:hover .desc-layer .desc-layer-content,
+.train:hover .desc-layer .desc-layer-content,
+.bus-right:hover .desc-layer .desc-layer-content,
+.hotel:hover .desc-layer .desc-layer-content {
     opacity: 1;
     display: block;
 }
@@ -305,7 +301,6 @@ body {
     height: 98%;
     border-radius: 1.5rem;
     background-color: rgb(255, 255, 255);
-    filter: brightness(0.9);
     position: relative;
     overflow: hidden;
 }
@@ -323,7 +318,7 @@ body {
     filter: drop-shadow(1px 1px 3px #00a6ff);
 }
 
-.sidenav-right .bus-right {
+.bus-right {
     background-image: url("bus.png");
     background-size: cover;
     filter: drop-shadow(20px 20px 10px #282b33);
@@ -333,7 +328,7 @@ body {
     cursor: pointer;
 }
 
-.sidenav-right .watch-right {
+.watch-right {
     filter: drop-shadow(20px 20px 10px #282b33);
     width: 100%;
     height: 65vh;
@@ -639,11 +634,12 @@ li.nav-more-item:hover {
 .mainscreen .screencontent.full-screen {
     width: 100%;
     height: 100%;
-    background-color: rgb(255 255 255 / 90%);
+    background-color: rgb(255 255 255 / 50%);
     filter: unset;
     position: relative;
     overflow: hidden;
     border-radius: unset;
+    backdrop-filter: blur(2px);
 }
 
 .mainscreen .screencontent.full-screen::before{
@@ -663,27 +659,6 @@ li.nav-more-item.full-screen {
     padding: 1%;
 }
 
-/* table.table-custom{
-    margin-bottom: 5px;
-    text-align: center;
-    width: 100%;
-    font-size: 1rem;
-    font-family: ltlight;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-    color: whitesmoke;
-}
-
-table.table-custom tbody,table.table-custom td,table.table-custom tfoot,table.table-custom th,table.table-custom thead,table.table-custom tr {
-    padding: 5px;
-    border-width: 0;
-    border-bottom: 1px solid #373b46;
-}
-
-table.table-custom thead{
-    font-size: 0.8rem;
-    color: #fec987;
-} */
 
 @media (max-width: 1024px) {
     .sidenav-right {
@@ -698,32 +673,32 @@ table.table-custom thead{
         gap: unset;
     }
 
-    .sidenav-navitem-3 .airplane,
-    .sidenav-navitem-3 .train,
-    .sidenav-right .bus-right,
-    .sidenav-navitem-2 .hotel {
+    .airplane,
+    .train,
+    .bus-right,
+    .hotel {
         height: 25vh;
     }
 
-    .sidenav-right .bus-right {
+    .bus-right {
         width: 80%;
     }
 
-    .sidenav-navitem-2 .recent_trans .recent_trans-section1 {
+    .recent_trans .recent_trans-section1 {
         font-size: 0.8rem;
     }
 
-    .sidenav-navitem-3 .airplane .desc-layer .desc-layer-heading,
-    .sidenav-navitem-3 .train .desc-layer .desc-layer-heading,
-    .sidenav-right .bus-right .desc-layer .desc-layer-heading,
-    .sidenav-navitem-2 .hotel .desc-layer .desc-layer-heading {
+    .airplane .desc-layer .desc-layer-heading,
+    .train .desc-layer .desc-layer-heading,
+    .bus-right .desc-layer .desc-layer-heading,
+    .hotel .desc-layer .desc-layer-heading {
         font-size: 1rem;
     }
 
-    .sidenav-navitem-3 .airplane .desc-layer .desc-layer-content,
-    .sidenav-navitem-3 .train .desc-layer .desc-layer-content,
-    .sidenav-right .bus-right .desc-layer .desc-layer-content,
-    .sidenav-navitem-2 .hotel .desc-layer .desc-layer-content {
+    .airplane .desc-layer .desc-layer-content,
+    .train .desc-layer .desc-layer-content,
+    .bus-right .desc-layer .desc-layer-content,
+    .hotel .desc-layer .desc-layer-content {
         font-size: 0.7rem;
     }
 
@@ -731,7 +706,7 @@ table.table-custom thead{
         height: 15vh;
     }
 
-    .sidenav-navitem-2 .recent_trans {
+    .recent_trans {
         height: 20vh;
     }
 
@@ -746,7 +721,7 @@ table.table-custom thead{
         padding: 0.5rem 0.5rem;
     }
 
-    .sidenav-navitem-1 .journey-calendar {
+    .journey-calendar {
         height: 100%;
     }
 
@@ -768,7 +743,3 @@ table.table-custom thead{
         font-size: 0.8em;
     }
 }
-/* 
-@media (max-width: 768px) {
-    
-} */
