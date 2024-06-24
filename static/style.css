@@ -28,6 +28,44 @@ body {
     align-items: center;
 }
 
+a{
+    text-decoration: none;
+    color: #090909;
+}
+
+.notification-tab{
+    position: absolute;
+    top: 1%;
+    left: 10%;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    transition: all .5s ease-in-out;
+    transform: translateY(-120%);
+    padding: 2% 5%;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    color: white;
+    filter: drop-shadow(2px 2px 5px black);
+    background: linear-gradient(90deg, #ffffff73 0%, #0000007a 100%)
+}
+
+.notification-tab ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    font-variant: all-petite-caps;
+}
+
+.notification-tab.active{
+    transform: translateY(0%);
+}
+
 .mainscreen {
     width: 32%;
     display: flex;
@@ -47,7 +85,7 @@ body {
     border-radius: 2rem;
     border: 2px solid #c5c1c1;
     background-color: black;
-    filter: drop-shadow(10px 10px 10px #282b33);
+    filter: drop-shadow(5px 5px 5px #282b33);
 }
 
 .scr-cont-nav-2 {
@@ -55,7 +93,7 @@ body {
     height: 5vh;
     background: url('pen.png') no-repeat center center;
     background-size: contain;
-    filter: drop-shadow(20px 15px 10px #282b33);
+    filter: drop-shadow(5px 5px 5px #282b33);
 }
 
 .background-main-image {
@@ -117,7 +155,7 @@ body {
 .journey-calendar {
     height: 30vh;
     width: 70%;
-    filter: drop-shadow(10px 10px 4px #282b33);
+    filter: drop-shadow(5px 5px 5px #282b33);
     background: linear-gradient(135deg, #0d2d2a, #b4b4b4ad);
     border-radius: 1rem;
     box-shadow: 2px 2px 4px white inset, -2px -2px 0px black inset;
@@ -138,7 +176,7 @@ body {
     border-radius: 50%;
     box-shadow: 10px 10px 20px white inset, 2px 1px 2px #c5c1c1 inset;
     background-color: #282b33;
-    filter: drop-shadow(10px 5px 10px #282b33);
+    filter: drop-shadow(5px 5px 5px #282b33);
     position: relative;
     z-index: 100;
     cursor: pointer;
@@ -161,7 +199,7 @@ body {
     width: 40%;
     background-image: url("airplane.png");
     background-size: cover;
-    filter: drop-shadow(20px 20px 10px #282b33);
+    filter: drop-shadow(5px 5px 10px #282b33);
     position: relative;
     cursor: pointer;
 }
@@ -171,7 +209,7 @@ body {
     width: 55%;
     background-image: url("tram.png");
     background-size: cover;
-    filter: drop-shadow(20px 20px 10px #282b33);
+    filter: drop-shadow(5px 5px 10px #282b33);
     position: relative;
     cursor: pointer;
 }
@@ -181,7 +219,7 @@ body {
     width: 40%;
     background-image: url("hotel.png");
     background-size: cover;
-    filter: drop-shadow(20px 20px 10px #282b33);
+    filter: drop-shadow(5px 5px 10px #282b33);
     position: relative;
     cursor: pointer;
 }
@@ -189,7 +227,7 @@ body {
 .recent_trans {
     height: 25vh;
     width: 55%;
-    filter: drop-shadow(10px 10px 4px #282b33);
+    filter: drop-shadow(5px 5px 5px #282b33);
     background: linear-gradient(135deg, #0d2d2a, #b4b4b4ad);
     border-radius: 1rem;
     box-shadow: 2px 2px 4px white inset, -2px -2px 0px black inset;
@@ -321,7 +359,7 @@ body {
 .bus-right {
     background-image: url("bus.png");
     background-size: cover;
-    filter: drop-shadow(20px 20px 10px #282b33);
+    filter: drop-shadow(5px 5px 10px #282b33);
     width: 95%;
     height: 30vh;
     position: relative;
@@ -329,7 +367,7 @@ body {
 }
 
 .watch-right {
-    filter: drop-shadow(20px 20px 10px #282b33);
+    filter: drop-shadow(5px 5px 10px #282b33);
     width: 100%;
     height: 65vh;
     display: flex;

@@ -93,13 +93,20 @@
 				<div class="screenparent">
 					<div class="screencontent">
 						<div class="container_tab has-scrollbar">
+							<div class="notification-tab">
+								<ul>
+								{% for message in messages %}
+									<li>{{ message }}</li>
+								{% endfor %}
+								</ul>
+							</div>
 							<nav>
 								<ul class="navbar-c">
 									<li id="nav-logo" class="nav-item-h">Tbook</li>
-									<li class="nav-item-c">Home</li>
+									<li data="home" class="nav-item-c">Home</li>
 									<li class="nav-item-c">About</li>
 									<li data='more' class="nav-item-c">More</li>
-									<li class="nav-item-c">Profile</li>
+									<li data="profile" class="nav-item-c">Profile</li>
 								</ul>
 							</nav>
 							<ul class="nav-more">

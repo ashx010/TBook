@@ -124,7 +124,13 @@ $(document).ready(function () {
 		}
 	});
 
+	$(".navbar-c .nav-item-c[data='profile']").on('click', function(){
+		window.location.href = "profile";
+	});
 
+	$(".navbar-c .nav-item-c[data='home']").on('click', function(){
+		window.location.href = "/";
+	});
 
 	if (window.screen.width <= 768) {
 		$("ul.nav-more .nav-more-item[data='full-screen']").hide();
